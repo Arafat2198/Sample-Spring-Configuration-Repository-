@@ -1,4 +1,4 @@
-![](https://forthebadge.com/images/badges/made-with-python.svg)
+![](https://forthebadge.com/images/badges/made-with-java.svg)
 ![](https://forthebadge.com/images/badges/kinda-sfw.svg)
 
 # Spring-Configuration-Repository
