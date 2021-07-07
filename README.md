@@ -56,12 +56,12 @@ GET http://localhost:8888/limits
 This displays the config properties which are being retrieved from the git repo by the Config Server 
 
 ```bash
-GET http://localhost:8080/limits
+GET http://localhost:8080/limits/dev
 ```
 This displays the config properties which are being retrieved from the Config Server by the Git Repo for the Development env
 
 ```bash
-GET http://localhost:8080/limits
+GET http://localhost:8080/limits/qa
 ```
 This displays the config properties which are being retrieved from the Config Server by the Git Repo for the QA env
 
