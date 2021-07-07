@@ -42,38 +42,38 @@ Note: keep the server running in backround. The client app in the next step need
 ### All the Important URI
 
 ```bash
-Load [http://localhost:8888/limits](http://localhost:8888/limits-service/dev). 
+GET http://localhost:8888/limits
 ```
 This displays the config properties which are being retrieved from the git repo by the Config Server 
 
 ```bash
-Load [http://localhost:8080/limits](http://localhost:8080/limits/dev). 
+GET http://localhost:8080/limits
 ```
 This displays the config properties which are being retrieved from the Config Server by the Git Repo for the Development env
 
 ```bash
-Load [http://localhost:8080/limits](http://localhost:8080/limits/qa). 
+GET http://localhost:8080/limits
 ```
 This displays the config properties which are being retrieved from the Config Server by the Git Repo for the QA env
 
 ```bash
-Load [http://localhost:8080/limits/default](http://localhost:8080/limits/default). 
+GET http://localhost:8080/limits/default
 ```
 This displays the config properties which are being retrieved from the Config Server by the Git Repo for the Default env
 
 ```bash
-GET [http://localhost:8080/actuator](http://localhost:8080/actuator). 
+GET http://localhost:8080/actuator](http://localhost:8080/actuator
 ```
 This displays all the Actuator EndPoints for a particular Microservice
 
 ```bash
-POST [http://localhost:8080/actuator/refresh]
+POST http://localhost:8080/actuator/refresh
 ```
 To refresh a single Microservices with the updated end points, send a Blank POST requests for this end point using POST Man
 Note: This needs to be done for every Microservice
 
 ```bash
-POST [http://localhost:8080/actuator/refresh](http://localhost:8080/actuator/bus-refresh).
+POST http://localhost:8080/actuator/refresh
 ```
 To refresh all the Microservices with the updated end points, send a Blank POST requests for this end point using POST Man to any single Microserrvice 
 Note: This needs to be done for every Microservice
