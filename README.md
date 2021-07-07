@@ -67,7 +67,7 @@ GET [http://localhost:8080/actuator](http://localhost:8080/actuator).
 This displays all the Actuator EndPoints for a particular Microservice
 
 ```bash
-POST [http://localhost:8080/actuator/refresh](http://localhost:8080/actuator/refresh). 
+POST [http://localhost:8080/actuator/refresh]
 ```
 To refresh a single Microservices with the updated end points, send a Blank POST requests for this end point using POST Man
 Note: This needs to be done for every Microservice
