@@ -7,6 +7,15 @@ As an application moves through the deployment pipeline from dev to test and int
 The default implementation of the server storage backend uses git, so it easily supports labelled versions of configuration environments as well as being accessible to a wide range of tooling for managing the content.
 
 Note: You would be requiring Eclipse IDE for Java EE Developer for running Multiple Instances of the Limits Service, and Postman for making Blank POST Requests
+### Make Sure you have the following Installed 
+```bash
+1) GIT
+2) JAVA 8 or above
+3) Erlang OTP 20.0 above
+4) RabbitMQ
+5) Postman - (for making Blank POST Requests)
+6) Eclipse IDE for Java EE Developer - for running Multiple Instances of the Limits Service)
+```
 
 ## Quick Start
 
