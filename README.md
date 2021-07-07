@@ -3,37 +3,30 @@ Spring Cloud Config provides server-side and client-side support for externalize
 As an application moves through the deployment pipeline from dev to test and into production, you can manage the configuration between those environments and be certain that applications have everything they need to run when they migrate.
 The default implementation of the server storage backend uses git, so it easily supports labelled versions of configuration environments as well as being accessible to a wide range of tooling for managing the content.
 
+Note: You would be requiring Eclipse IDE for Java EE Developer.
+
 ## Quick Start
 
-### Build code
-
+### Creating the Limits REST Service using Spring Boot  
+Go to start.spring.io create a Spring Boot project with the following Dependencies: 
 ```bash
-git clone git@github.com:ericdahl/spring-cloud-config-example.git
-cd spring-cloud-config-example
-mvn clean package
+1) spring-boot-starter-actuator
+2) spring-boot-starter-web
+3) spring-cloud-starter-config
+4) spring-boot-devtools
+5) spring-boot-starter-test
 ```
-
-### Start Config Server
-
+### Add Details of the Config Server
 ```bash
-java -jar server/target/spring-cloud-config-example-server-1.0-SNAPSHOT.jar
+spring.config.import=optional:configserver:http://localhost:8888
 ```
-
-Load [http://localhost:8888/master/development](http://localhost:8888/master/development). 
-This displays the config properties which are being retrieved from the git repo defined 
-in bootstrap.yml. This currently is the [`server-config` directory in this repository](https://github.com/ericdahl/spring-cloud-config-example/tree/master/server-config).
-
-Note: keep the server running in backround. The client app in the next step needs to connect to it.
-
-### Start Client App
+### Setup the Spring cloud config server
+Go to start.spring.io create a Spring Boot project with the following Dependencies: 
 ```bash
-java -jar client/target/*jar
+1) Spring Boot DevTools 
+2) Config Server
 ```
-
-Load [http://localhost:8080](http://localhost:8080) to see the property from the server. 
-Alternatively, you can inspect the properties and their sources from the spring-boot-actuator
-endpoint at [http://localhost:8080/env](http://localhost:8080/env)
-
+Note: Since port 8080 is already in use by our application, we will use port 8888 for our config server
 ### Reload configuration from server (at runtime)
 
 Spring Cloud Config has a `@RefreshScope` mechanism to allow beans to be reinitialized
@@ -41,6 +34,44 @@ on demand to fetch updated configuration values. The AppController on the client
 has this annotation, so it will display the new config value once the refresh
 endpoint is called.
 
+Note: keep the server running in backround. The client app in the next step needs to connect to it.
+
+### All the Important URI
+
 ```bash
-curl -X POST 'http://localhost:8080/actuator/refresh'
+Load [http://localhost:8888/limits](http://localhost:8888/limits-service/dev). 
 ```
+This displays the config properties which are being retrieved from the git repo by the Config Server 
+
+```bash
+Load [http://localhost:8080/limits](http://localhost:8080/limits/dev). 
+```
+This displays the config properties which are being retrieved from the Config Server by the Git Repo for the Development env
+
+```bash
+Load [http://localhost:8080/limits](http://localhost:8080/limits/qa). 
+```
+This displays the config properties which are being retrieved from the Config Server by the Git Repo for the QA env
+
+```bash
+Load [http://localhost:8080/limits/default](http://localhost:8080/limits/default). 
+```
+This displays the config properties which are being retrieved from the Config Server by the Git Repo for the Default env
+
+```bash
+GET [http://localhost:8080/actuator](http://localhost:8080/actuator). 
+```
+This displays all the Actuator EndPoints for a particular Microservice
+
+```bash
+POST [http://localhost:8080/actuator/refresh](http://localhost:8080/actuator/refresh). 
+```
+To refresh a single Microservices with the updated end points, send a Blank POST requests for this end point using POST Man
+Note: This needs to be done for every Microservice
+
+```bash
+POST [http://localhost:8080/actuator/refresh](http://localhost:8080/actuator/bus-refresh).
+```
+To refresh all the Microservices with the updated end points, send a Blank POST requests for this end point using POST Man to any single Microserrvice 
+Note: This needs to be done for every Microservice
+
