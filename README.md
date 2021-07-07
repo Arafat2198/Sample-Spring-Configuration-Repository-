@@ -6,7 +6,7 @@ Spring Cloud Config provides server-side and client-side support for externalize
 As an application moves through the deployment pipeline from dev to test and into production, you can manage the configuration between those environments and be certain that applications have everything they need to run when they migrate.
 The default implementation of the server storage backend uses git, so it easily supports labelled versions of configuration environments as well as being accessible to a wide range of tooling for managing the content.
 
-Note: You would be requiring Eclipse IDE for Java EE Developer, and Postman for making Blank POST Requests
+Note: You would be requiring Eclipse IDE for Java EE Developer for running Multiple Instances of the Limits Service, and Postman for making Blank POST Requests
 
 ## Quick Start
 
