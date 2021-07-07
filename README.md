@@ -14,7 +14,7 @@ Note: You would be requiring Eclipse IDE for Java EE Developer for running Multi
 3) Erlang OTP 20.0 above
 4) RabbitMQ
 5) Postman - (for making Blank POST Requests)
-6) Eclipse IDE for Java EE Developer - for running Multiple Instances of the Limits Service)
+6) Eclipse IDE for Java EE Developer - (for running Multiple Instances of the Limits Service)
 ```
 
 ## Quick Start
