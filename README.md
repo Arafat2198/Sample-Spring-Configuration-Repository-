@@ -1,5 +1,7 @@
-# spring-cloud-config-example
-basic example of using spring-cloud-config to retrieve configs from a git-backed server
+# Spring-Configuration-Repository
+Spring Cloud Config provides server-side and client-side support for externalized configuration in a distributed system. With the Config Server, you have a central place to manage external properties for applications across all environments. 
+As an application moves through the deployment pipeline from dev to test and into production, you can manage the configuration between those environments and be certain that applications have everything they need to run when they migrate.
+The default implementation of the server storage backend uses git, so it easily supports labelled versions of configuration environments as well as being accessible to a wide range of tooling for managing the content.
 
 ## Quick Start
 
