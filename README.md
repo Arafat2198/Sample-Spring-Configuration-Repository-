@@ -62,7 +62,7 @@ GET http://localhost:8080/limits/default
 This displays the config properties which are being retrieved from the Config Server by the Git Repo for the Default env
 
 ```bash
-GET http://localhost:8080/actuator](http://localhost:8080/actuator
+GET http://localhost:8080/actuator
 ```
 This displays all the Actuator EndPoints for a particular Microservice
 
