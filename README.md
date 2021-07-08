@@ -36,8 +36,9 @@ spring.config.import=optional:configserver:http://localhost:8888
 ### Setup the Spring cloud config server
 Go to start.spring.io create a Spring Boot project with the following Dependencies: 
 ```bash
-1) Spring Boot DevTools 
-2) Config Server
+1) spring-boot-devtools
+2) spring-cloud-config-server
+3) spring-cloud-starter-bus-amqp
 ```
 Note: Since port 8080 is already in use by our application, we will use port 8888 for our config server
 ### Reload configuration from server (at runtime)
