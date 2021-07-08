@@ -49,6 +49,15 @@ endpoint is called.
 
 Note: keep the server running in backround. The client app in the next step needs to connect to it.
 
+### All the Important Ports
+```bash
+Limits Service Instance 1- localhost:8080
+Limits Service Instance 2- localhost:8081
+Limits Service Instance 3- localhost:8082
+Spring Config Server: localhost-8888
+RabbitMQ Message Broker- localhost:15672
+```
+
 ### All the Important URI
 
 ```bash
