@@ -80,12 +80,12 @@ This displays all the Actuator EndPoints for a particular Microservice
 ```bash
 POST http://localhost:8080/actuator/refresh
 ```
-To refresh a single Microservices with the updated end points, send a Blank POST requests for this end point using POST Man
+To refresh a single Microservices with the updated configurations, send a Blank POST requests for this end point using POST Man
 Note: This needs to be done for every Microservice
 
 ```bash
 POST http://localhost:8080/actuator/busrefresh
 ```
-To refresh all the Microservices with the updated end points, send a Blank POST requests for this end point using POST Man to any single Microserrvice 
-Note: This needs to be done for every Microservice
+To refresh all the Microservices with the updated configurations, send a Blank POST requests for this end point using POST Man to any single Microserrvice 
+Note: This needs to be done for only a single Microservice
 
