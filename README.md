@@ -57,19 +57,19 @@ GET http://localhost:8888/limits
 This displays the config properties which are being retrieved from the git repo by the Config Server 
 
 ```bash
-GET http://localhost:8080/limits/dev
+GET http://localhost:8888/limits/dev
 ```
-This displays the config properties which are being retrieved from the Config Server by the Git Repo for the Development env
+This displays the config properties which are being retrieved from the Git Repo for the Development env
 
 ```bash
-GET http://localhost:8080/limits/qa
+GET http://localhost:8888/limits/qa
 ```
-This displays the config properties which are being retrieved from the Config Server by the Git Repo for the QA env
+This displays the config properties which are being retrieved from the Git Repo for the QA env
 
 ```bash
-GET http://localhost:8080/limits/default
+GET http://localhost:8888/limits/default
 ```
-This displays the config properties which are being retrieved from the Config Server by the Git Repo for the Default env
+This displays the config properties which are being retrieved from the Git Repo Repo for the Default env
 
 ```bash
 GET http://localhost:8080/actuator
