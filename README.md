@@ -24,9 +24,10 @@ Go to start.spring.io create a Spring Boot project with the following Dependenci
 ```bash
 1) spring-boot-starter-actuator
 2) spring-boot-starter-web
-3) spring-cloud-starter-config
+3) spring-boot-starter-test 
 4) spring-boot-devtools
-5) spring-boot-starter-test
+5) spring-cloud-starter-config
+6) spring-cloud-starter-bus-amqp
 ```
 ### Add Details of the Config Server
 ```bash
