@@ -6,7 +6,7 @@ Spring Cloud Config provides server-side and client-side support for externalize
 As an application moves through the deployment pipeline from dev to test and into production, you can manage the configuration between those environments and be certain that applications have everything they need to run when they migrate.
 The default implementation of the server storage backend uses git, so it easily supports labelled versions of configuration environments as well as being accessible to a wide range of tooling for managing the content.
 
-<img src="https://user-images.githubusercontent.com/54267475/136686482-7a5d970d-615b-489a-adc7-c50d368361ad.png" width="300" height="600"/>
+<img src="https://user-images.githubusercontent.com/54267475/136686482-7a5d970d-615b-489a-adc7-c50d368361ad.png" width="600" height="300"/>
 
 ### Make Sure you have the following Installed 
 ```bash
